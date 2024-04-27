@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    font-size: 62.5%;
+    --font-family-h1: "Montserrat", sans-serif;
+    --font-family-p-button: "DM Sans", sans-serif;
+    --font-family-luck: "Dancing Script", cursive;
+    --background-body: linear-gradient(45deg, #190361, #bb00ff);
+    --font-color: #34355B;
+    --white-colorBackground: #fff;
+}
+
+body {
+    background: var(--background-body);
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+.hide {
+    display: none;
+
+}
+
+p,
+button {
+    font-size: 1.5rem;
+    font-family: var(--font-family-p-button);
+}
+
+
+main {
+    background: var(--white-colorBackground);
+    width: min(42.8rem, 70%);
+    padding: 4.8rem 6.4rem 6.4rem;
+    border-radius: .5rem;
+    box-shadow: 0 2.0rem 5.0rem 0 rgba(0, 0, 0, 0.80);
+    text-align: center;
+    margin-bottom: 12rem;
+}
+img {
+    width: 80%;
+    height: 80%;
+}
+
+/* SCREEN 1 */
+h1 {
+    color: var(--font-color);
+    font-size: 2.4rem;
+    font-weight: 700;
+    font-family: var(--font-family-h1);
+    margin-bottom: 1.4rem;
+}
+
+p {
+    margin-bottom: 2.6rem;
+    color: var(--font-color);
+    font-weight: 400;
+}
+/* SCREEN2 */
+.screen2 h1{
+    margin-bottom: 1.7rem;
+}
+.luck{
+    font-family: var(--font-family-luck);
+    font-size: 2.4rem;
+    font-weight: 400;
+
+    display: block;
+    width: min(27.3rem, 80%);
+
+
+    background: #E4EDF1;
+    box-shadow: .2rem .2rem .2rem 0 rgba(85, 85, 85, 0.50);
+
+    margin-inline: auto;
+    margin-bottom: 6.0rem;
+    padding: 1.0rem;
+}
+button {
+    color: var(--white-colorBackground);
+    font-weight: 700;
+    padding: 1.6rem;
+    border-radius: 4px;
+    background: #FF9500;
+    border: none;
+    margin-top: 6.0rem;
+    transition: background .17s;
+}
+button:hover{
+    background: #a96200;
+}
