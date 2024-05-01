@@ -14,13 +14,31 @@
     --white-colorBackground: #fff;
 }
 
+
 body {
     background: var(--background-body);
     height: 100vh;
     display: grid;
     place-items: center;
+    background-size: 200% 200%;
+
+    animation: rotateBackground 10s ease infinite;
 }
 
+@keyframes rotateBackground{
+    0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+/* Card  centralized*/
 .hide {
     display: none;
 
@@ -42,6 +60,7 @@ main {
     text-align: center;
     margin-bottom: 12rem;
 }
+
 img {
     width: 80%;
     height: 80%;
@@ -61,11 +80,53 @@ p {
     color: var(--font-color);
     font-weight: 400;
 }
+
+.screen1 div>img:hover {
+    animation: vibrateFortune 500ms infinite;
+}
+
+@keyframes vibrateFortune {
+    0% {
+        transform: translate(0);
+      }
+      10% {
+        transform: translate(-2px, -2px);
+      }
+      20% {
+        transform: translate(2px, -2px);
+      }
+      30% {
+        transform: translate(-2px, 2px);
+      }
+      40% {
+        transform: translate(2px, 2px);
+      }
+      50% {
+        transform: translate(-2px, -2px);
+      }
+      60% {
+        transform: translate(2px, -2px);
+      }
+      70% {
+        transform: translate(-2px, 2px);
+      }
+      80% {
+        transform: translate(-2px, -2px);
+      }
+      90% {
+        transform: translate(2px, -2px);
+      }
+      100% {
+        transform: translate(0);
+      }
+}
+
 /* SCREEN2 */
-.screen2 h1{
+.screen2 h1 {
     margin-bottom: 1.7rem;
 }
-.luck{
+
+.luck {
     font-family: var(--font-family-luck);
     font-size: 2.4rem;
     font-weight: 400;
@@ -81,6 +142,7 @@ p {
     margin-bottom: 6.0rem;
     padding: 1.0rem;
 }
+
 button {
     color: var(--white-colorBackground);
     font-weight: 700;
@@ -91,6 +153,7 @@ button {
     margin-top: 6.0rem;
     transition: background .17s;
 }
-button:hover{
+
+button:hover {
     background: #a96200;
 }
