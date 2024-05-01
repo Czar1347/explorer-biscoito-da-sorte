@@ -13,15 +13,17 @@ const btnAnotherFortune = document.querySelector("#btnAnotherFortune");
 const luckMessage = document.querySelector(".luck p");
 
 //Funções
-const callFortune = (e) => {
-  e.preventDefault();
+const toogleChange = () => {
   document.querySelector(".screen1").classList.toggle("hide");
   document.querySelector(".screen2").classList.toggle("hide");
+};
+const callFortune = (e) => {
+  e.preventDefault();
+  toogleChange();
   luckMessage.innerHTML = phrases[numberArray];
 };
 const fortuneReset = () => {
-  document.querySelector(".screen1").classList.toggle("hide");
-  document.querySelector(".screen2").classList.toggle("hide");
+  toogleChange();
   numberArray = Math.floor(Math.random() * phrases.length);
 };
 
